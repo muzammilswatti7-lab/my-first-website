@@ -217,25 +217,32 @@ body{
 @media(max-width:900px){
 
     .navbar{
-        flex-direction:column;
-        gap:15px;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding:18px 20px;
+    }
+
+    .logo{
+        font-size:24px;
     }
 
     .hero{
         flex-direction:column;
         text-align:center;
-        padding-top:180px;
+        padding:120px 20px 60px;
     }
 
     .hero-content{
-        text-align:center;
+        width:100%;
     }
 
     .hero h1{
-        font-size:48px;
+        font-size:42px;
     }
 
     .hero p{
+        font-size:18px;
         margin:auto;
         margin-bottom:30px;
     }
@@ -246,12 +253,13 @@ body{
 
     .hero-card{
         width:100%;
-        max-width:380px;
+        max-width:100%;
     }
 
     .trust-boxes{
         grid-template-columns:1fr;
     }
+}
 }
 /* ================= SERVICES ================= */
 
@@ -338,14 +346,7 @@ body{
     padding:0 40px;
 }
 
-/* ================= FOOTER ================= */
 
-footer{
-    border-top:1px solid rgba(255,255,255,.08);
-    text-align:center;
-    padding:35px;
-    color:#94a3b8;
-}
 
 /* ================= RESPONSIVE ================= */
 
@@ -713,4 +714,75 @@ footer{
 .contact-form textarea:focus{
     outline:none;
     border-color:#3b82f6;
+}
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:#081120;
+}
+
+footer h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#94a3b8;
+    margin:10px 0;
+}
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#fff;
+}
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:row;
+        justify-content:space-between;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#081120;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        padding:30px 0;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
+.logo{
+    white-space:nowrap;
+}
+
+.hero,
+.services,
+.about,
+.contact,
+.results,
+.why,
+.brands,
+.faq,
+.testimonials,
+.cta{
+    overflow:hidden;
 }

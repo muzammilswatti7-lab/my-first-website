@@ -70,3 +70,11 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector(".results"));
+// ================= MOBILE MENU =================
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
