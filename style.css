@@ -602,3 +602,27 @@ footer{
     }
 
 }
+/* ================= CTA ================= */
+
+.cta{
+    max-width:1200px;
+    margin:120px auto;
+    padding:80px 40px;
+    text-align:center;
+    background:#111c2f;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    font-size:18px;
+}
