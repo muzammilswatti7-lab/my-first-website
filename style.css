@@ -689,3 +689,28 @@ footer{
 .whatsapp:hover{
     transform:scale(1.1);
 }
+/* ================= CONTACT FORM ================= */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-top:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:16px;
+    background:#111c2f;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;
+    color:#fff;
+    font-size:16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#3b82f6;
+}
