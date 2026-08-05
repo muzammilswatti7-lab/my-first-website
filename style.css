@@ -515,3 +515,43 @@ footer{
     }
 
 }
+/* ================= BRANDS ================= */
+
+.brands{
+    max-width:1200px;
+    margin:120px auto;
+    padding:0 40px;
+}
+
+.brands-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.brand-card{
+    background:#111c2f;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.brand-card:hover{
+    transform:translateY(-10px);
+    border-color:#3b82f6;
+    box-shadow:0 20px 40px rgba(37,99,235,.15);
+    color:#3b82f6;
+}
+
+@media(max-width:900px){
+
+    .brands-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
