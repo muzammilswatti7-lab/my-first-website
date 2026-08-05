@@ -7,6 +7,7 @@
     <title>MK Digital Labs | Digital Marketing Agency</title>
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,23 +35,26 @@
 
         <div class="hero-content">
 
-            <span class="badge">
+            <span class="badge" data-aos="fade-right">
                 🚀 Meta Ads • AI Automation • Pixel • CAPI
             </span>
 
-            <h1>
-                Grow Your Business
-                <span>Faster</span>
+                <h1 data-aos="fade-up">
+    Grow Your Business
+    <span>Faster</span>
+
             </h1>
 
-            <p>
-                We help businesses generate more leads, increase sales,
-                and scale faster with Meta Advertising,
-                Conversion Tracking, AI Automation,
-                and High-Converting Landing Pages.
-            </p>
 
-            <div class="hero-buttons">
+<p data-aos="fade-up">
+    We help businesses generate more leads, increase sales,
+    and scale faster with Meta Advertising,
+    Conversion Tracking, AI Automation,
+    and High-Converting Landing Pages.
+</p>
+
+
+           <div class="hero-buttons" data-aos="zoom-in">
 
                 <a href="#" class="btn primary">
                     Get Started
@@ -64,7 +68,9 @@
 
         </div>
 
-        <div class="hero-card">
+        <div class="hero-card"
+     data-aos="fade-left"
+     data-aos-duration="1200">
 
             <h3>📈 Growth Dashboard</h3>
 
@@ -92,108 +98,93 @@
 
     </section>
 
-    <!-- ================= SERVICES ================= -->
+<!-- ================= SERVICES ================= -->
 
-    <section class="services" id="services">
+<section class="services" id="services">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <span>OUR SERVICES</span>
+        <span>OUR SERVICES</span>
 
-            <h2>
-                Complete Digital Growth Solutions
-            </h2>
+        <h2>Complete Digital Growth Solutions</h2>
 
+        <p>
+            Everything you need to scale your business,
+            generate quality leads,
+            and maximize your return on investment.
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card" data-aos="fade-up">
+            <div class="icon">📢</div>
+            <h3>Meta Advertising</h3>
             <p>
-                Everything you need to scale your business,
-                generate quality leads,
-                and maximize your return on investment.
+                Facebook & Instagram advertising campaigns
+                optimized for maximum ROAS,
+                lower CPA,
+                and business growth.
             </p>
-
         </div>
 
-        <div class="services-grid">
-
-            <div class="service-card">
-                <div class="icon">📢</div>
-
-                <h3>Meta Advertising</h3>
-
-                <p>
-                    Facebook & Instagram advertising campaigns
-                    optimized for maximum ROAS,
-                    lower CPA,
-                    and business growth.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">🎯</div>
-
-                <h3>Landing Pages</h3>
-
-                <p>
-                    High-converting landing pages designed
-                    to turn visitors into qualified customers.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">📊</div>
-
-                <h3>Tracking & Analytics</h3>
-
-                <p>
-                    Meta Pixel,
-                    Conversion API,
-                    Google Analytics 4,
-                    and Google Tag Manager setup.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">🤖</div>
-
-                <h3>AI Automation</h3>
-
-                <p>
-                    Automate repetitive tasks,
-                    customer support,
-                    follow-ups,
-                    and business workflows.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">📈</div>
-
-                <h3>Conversion Optimization</h3>
-
-                <p>
-                    Improve website conversion rate
-                    through analytics,
-                    testing,
-                    and optimization.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">💼</div>
-
-                <h3>Growth Consulting</h3>
-
-                <p>
-                    Digital marketing strategy,
-                    business scaling,
-                    funnel optimization,
-                    and growth planning.
-                </p>
-            </div>
-
+        <div class="service-card" data-aos="fade-up">
+            <div class="icon">🎯</div>
+            <h3>Landing Pages</h3>
+            <p>
+                High-converting landing pages designed
+                to turn visitors into qualified customers.
+            </p>
         </div>
 
-    </section>
+        <div class="service-card" data-aos="fade-up">
+            <div class="icon">📊</div>
+            <h3>Tracking & Analytics</h3>
+            <p>
+                Meta Pixel,
+                Conversion API,
+                Google Analytics 4,
+                and Google Tag Manager setup.
+            </p>
+        </div>
 
+        <div class="service-card" data-aos="fade-up">
+            <div class="icon">🤖</div>
+            <h3>AI Automation</h3>
+            <p>
+                Automate repetitive tasks,
+                customer support,
+                follow-ups,
+                and business workflows.
+            </p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up">
+            <div class="icon">📈</div>
+            <h3>Conversion Optimization</h3>
+            <p>
+                Improve website conversion rate
+                through analytics,
+                testing,
+                and optimization.
+            </p>
+        </div>
+
+        <div class="service-card" data-aos="fade-up">
+            <div class="icon">💼</div>
+            <h3>Growth Consulting</h3>
+            <p>
+                Digital marketing strategy,
+                business scaling,
+                funnel optimization,
+                and growth planning.
+            </p>
+        </div>
+
+    </div>
+
+</section>
   <!-- ================= WHY CHOOSE US ================= -->
 
 <section class="why" id="about">
@@ -484,7 +475,11 @@
         </p>
 
     </footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+<script>
+AOS.init();
+</script>
     <script src="script.js"></script>
 <!-- ================= WHATSAPP BUTTON ================= -->
 
