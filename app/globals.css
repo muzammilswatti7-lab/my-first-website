@@ -272,3 +272,79 @@ button, input, textarea { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+/* PREMIUM LIGHT VISUAL UPGRADE */
+:root {
+  --ink: #f4f7fb;
+  --panel: #ffffff;
+  --panel-2: #eaf0f7;
+  --text: #101828;
+  --muted: #667085;
+  --line: rgba(16, 24, 40, 0.12);
+  --lime: #b7f238;
+  --cyan: #1bc8e8;
+  --violet: #8366f4;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+}
+
+.site-header.scrolled {
+  background: rgba(244, 247, 251, 0.88);
+  border-bottom-color: rgba(16, 24, 40, 0.1);
+}
+
+.nav-shell {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(16, 24, 40, 0.11);
+  box-shadow: 0 16px 50px rgba(24, 39, 75, 0.1);
+}
+
+.brand-copy strong { color: #101828; }
+.brand-copy small { color: #667085; }
+.nav-links a { color: #475467; }
+.nav-links a:hover { color: #101828; }
+
+.hero {
+  background:
+    radial-gradient(circle at 90% 12%, rgba(131, 102, 244, 0.16), transparent 31%),
+    radial-gradient(circle at 6% 88%, rgba(27, 200, 232, 0.14), transparent 27%),
+    linear-gradient(135deg, #ffffff 0%, #f2f6fb 55%, #e9f1fa 100%);
+}
+
+.hero-grid-lines {
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(16, 24, 40, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 24, 40, 0.055) 1px, transparent 1px);
+}
+
+.hero-grid-lines::after {
+  background: linear-gradient(90deg, #f4f7fb, transparent 18%, transparent 82%, #f4f7fb);
+}
+
+.hero-kicker {
+  color: #344054;
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(16, 24, 40, 0.12);
+}
+
+.hero-copy { color: #566275; }
+
+.button-primary {
+  color: #111b09;
+  background: linear-gradient(135deg, #c7ff3d, #a5ed25);
+  box-shadow: 0 14px 34px rgba(166, 224, 44, 0.3);
+}
+
+.button-outline {
+  color: #1d2939;
+  border-color: rgba(16, 24, 40, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.button-outline:hover {
+  background: #ffffff;
+  border-color: #1bc8e8;
+}
