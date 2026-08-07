@@ -71,3 +71,72 @@ faqItems.forEach((item) => {
 // Automatic footer year
 const currentYear = document.querySelector("#current-year");
 if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+// ================= CONTACT FORM =================
+
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+if (contactForm && formStatus) {
+
+    const submitButton = contactForm.querySelector(".form-submit");
+
+    contactForm.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        formStatus.textContent = "";
+        formStatus.className = "form-status";
+
+        try {
+
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(
+                "https://formsubmit.co/ajax/muzammilswatti7@gmail.com",
+                {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json"
+                    },
+                    body: formData
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("Form submission failed");
+            }
+
+            formStatus.innerHTML =
+                "<strong>Thank you! Your project details have been received.</strong><br>" +
+                "Our team will review your request and contact you shortly by email or WhatsApp.";
+
+            formStatus.classList.add("success");
+
+            contactForm.reset();
+
+            submitButton.textContent = "Message Sent ✓";
+
+            setTimeout(() => {
+                submitButton.textContent = "Send Your Project Details";
+                submitButton.disabled = false;
+            }, 3000);
+
+        } catch (error) {
+
+            formStatus.innerHTML =
+                "<strong>Something went wrong.</strong><br>" +
+                "Please try again or contact us directly on WhatsApp.";
+
+            formStatus.classList.add("error");
+
+            submitButton.textContent = "Try Again";
+            submitButton.disabled = false;
+        }
+
+    });
+
+}

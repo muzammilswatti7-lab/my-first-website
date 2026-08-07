@@ -1177,3 +1177,37 @@ svg {
         scroll-behavior: auto !important;
     }
 }
+/* ================= FORM STATUS ================= */
+
+.form-status {
+    display: none;
+    margin-top: 16px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-status.success {
+    display: block;
+    background: rgba(34, 197, 94, 0.10);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #bbf7d0;
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(239, 68, 68, 0.10);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #fecaca;
+}
+
+.form-status strong {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.form-submit:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
