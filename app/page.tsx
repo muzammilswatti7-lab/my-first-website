@@ -198,6 +198,7 @@ export default function Home() {
                 ["System", "#system"],
                 ["Process", "#process"],
                 ["FAQ", "#faq"],
+                ["Portfolio", "/portfolio"],
                 ["Contact", "#contact"],
               ].map(([label, href]) => (
                 <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
