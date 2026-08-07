@@ -272,3 +272,47 @@ button, input, textarea { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+/* MIDNIGHT PREMIUM ENHANCEMENT */
+:root {
+  --ink: #0e121a;
+  --panel: #151b26;
+  --panel-2: #1b2330;
+  --text: #f8fafc;
+  --muted: #abb4c2;
+  --line: rgba(226, 232, 240, 0.14);
+  --lime: #c4ff3d;
+  --cyan: #3bdcf2;
+  --violet: #a78bfa;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 78%, rgba(27, 220, 242, 0.09), transparent 28%),
+    #0e121a;
+}
+
+.nav-shell {
+  background: linear-gradient(110deg, rgba(24, 31, 42, 0.96), rgba(14, 18, 26, 0.94));
+  border-color: rgba(226, 232, 240, 0.16);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+}
+
+.site-header.scrolled {
+  background: rgba(14, 18, 26, 0.88);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(126, 87, 255, 0.20), transparent 34%),
+    radial-gradient(circle at 8% 90%, rgba(31, 216, 226, 0.13), transparent 30%),
+    linear-gradient(135deg, #101722 0%, #0e121a 54%, #111527 100%);
+}
+
+.hero-aurora { opacity: 0.26; }
+
+.hero [class*="panel"],
+.hero [class*="console"],
+.hero [class*="card"] {
+  border-color: rgba(226, 232, 240, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
