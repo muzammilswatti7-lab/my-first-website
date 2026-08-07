@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 const whatsapp =
   "https://wa.me/923153063373?text=Hello%20MK%20Digital%20Labs%2C%20I%20want%20to%20discuss%20my%20business%20growth.";
@@ -114,6 +114,40 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [formState, setFormState] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [statValues, setStatValues] = useState([0, 0, 0]);
+const statsRef = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  const element = statsRef.current;
+  if (!element) return;
+
+  let animationFrame = 0;
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) return;
+
+    observer.disconnect();
+    const targets = [8, 3, 24];
+    const startedAt = performance.now();
+    const duration = 1400;
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - startedAt) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setStatValues(targets.map((target) => Math.round(target * eased)));
+
+      if (progress < 1) animationFrame = requestAnimationFrame(tick);
+    };
+
+    animationFrame = requestAnimationFrame(tick);
+  }, { threshold: 0.45 });
+
+  observer.observe(element);
+
+  return () => {
+    observer.disconnect();
+    cancelAnimationFrame(animationFrame);
+  };
+}, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -245,6 +279,20 @@ export default function Home() {
                 <div><i>✓</i><span><strong>Clear reporting</strong><small>Decisions backed by data</small></span></div>
                 <div><i>✓</i><span><strong>Built to scale</strong><small>Systems, not quick fixes</small></span></div>
               </div>
+              <div className="hero-stats" ref={statsRef} aria-label="MK Digital Labs capabilities">
+  <div className="hero-stat">
+    <strong>{statValues[0]}<em>+</em></strong>
+    <span>Core services</span>
+  </div>
+  <div className="hero-stat">
+    <strong>{statValues[1]}</strong>
+    <span>Growth layers</span>
+  </div>
+  <div className="hero-stat">
+    <strong>{statValues[2]}<em>/7</em></strong>
+    <span>Automation ready</span>
+  </div>
+</div>
             </div>
 
             <div className="engine-wrap reveal-three" aria-label="MK growth engine overview">

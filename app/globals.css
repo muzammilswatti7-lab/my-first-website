@@ -316,3 +316,58 @@ body {
   border-color: rgba(226, 232, 240, 0.15);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
+/* PERFORMANCE OPTIMIZATION */
+main > section:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.hero-stat {
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,.035);
+}
+
+.hero-stat strong {
+  display: block;
+  color: var(--lime);
+  font-size: 27px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-stat strong em {
+  font-style: normal;
+  color: var(--cyan);
+}
+
+.hero-stat span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .hero-stats { grid-template-columns: 1fr; }
+}
