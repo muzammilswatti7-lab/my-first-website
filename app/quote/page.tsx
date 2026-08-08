@@ -530,6 +530,48 @@ export default function QuotePage() {
 
         .form-status.success { color: #c6ff3d; }
         .form-status.error { color: #ff7b7b; }
+        :global(.quote-brand) {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: white;
+  text-decoration: none;
+}
+
+:global(.quote-brand > span) {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: #101508;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #d1ff56, #aef229);
+  font-weight: 900;
+}
+
+:global(.quote-brand div) {
+  display: grid;
+  gap: 5px;
+}
+
+:global(.quote-brand strong) {
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+
+:global(.quote-brand small) {
+  display: block;
+  color: #818a98;
+  font-size: 8px;
+  letter-spacing: .2em;
+}
+
+:global(.back-link) {
+  color: #b5bdc9;
+  text-decoration: none;
+  font-size: 12px;
+}
 
         @media (max-width: 850px) {
           .quote-layout {
