@@ -238,9 +238,7 @@ useEffect(() => {
                 <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
               ))}
             </div>
-            <a className="button button-nav" href={whatsapp} target="_blank" rel="noreferrer">
-              <span>Book a free strategy call</span><i aria-hidden="true">↗</i>
-            </a>
+        <a className="button button-nav" href="/quote"></a>
           </div>
         </nav>
       </header>
@@ -266,7 +264,7 @@ useEffect(() => {
               </p>
 
               <div className="hero-actions reveal-four">
-                <a className="button button-primary magnetic" href="#contact">
+               <a className="button button-primary magnetic" href="/quote">
                   <span>Build my growth engine</span><i aria-hidden="true">→</i>
                 </a>
                 <a className="text-link" href="#services">

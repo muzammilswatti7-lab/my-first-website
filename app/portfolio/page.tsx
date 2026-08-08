@@ -134,9 +134,9 @@ export default function PortfolioPage() {
             <Link href="/#services">Services</Link>
             <Link href="/portfolio" className="active">Work</Link>
             <Link href="/#process">Process</Link>
-            <Link href="/#contact">Contact</Link>
+            <Link href="/quote">Contact</Link>
           </div>
-          <Link href="/#contact" className="nav-cta">Book a free strategy call ↗</Link>
+          <Link href="/quote" className="nav-cta">Book a free strategy call ↗</Link>
         </nav>
 
         <section className="hero">
@@ -168,7 +168,7 @@ export default function PortfolioPage() {
       <section className="cta">
         <h2>Ready to build your <span className="gradient">growth system?</span></h2>
         <p>Tell us where you want to go. We&apos;ll map the clearest way to get there.</p>
-        <Link href="/#contact" className="button">Build my growth engine →</Link>
+        <Link href="/quote" className="button">Build my growth engine →</Link>
       </section>
     </main>
   );
