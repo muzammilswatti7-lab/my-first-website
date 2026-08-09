@@ -562,7 +562,7 @@ useEffect(() => {
           <div className="footer-nav"><span>EXPLORE</span><a href="#services">Services</a><a href="#creative">Creative studio</a><a href="#system">Our system</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
           <div className="footer-nav"><span>CONTACT</span><a href="mailto:muzammilswatti7@gmail.com">Email us</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="#contact">Start a project</a></div>
         </div>
-        <div className="container footer-bottom"><span>© {new Date().getFullYear()} MK Digital Labs. All rights reserved.</span><span>PAKISTAN <i /> WORLDWIDE</span><a href="#home">BACK TO TOP ↑</a></div>
+        <div className="container footer-bottom"><span>© {new Date().getFullYear()} MK Digital Labs. All rights reserved.</span><a href="/privacy">PRIVACY POLICY</a><span>PAKISTAN <i /> WORLDWIDE</span><a href="#home">BACK TO TOP ↑</a></div>
       </footer>
 
       <a className="whatsapp-float" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chat with MK Digital Labs on WhatsApp"><i>WA</i><span>Let&apos;s talk</span></a>

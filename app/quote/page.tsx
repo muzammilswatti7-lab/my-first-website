@@ -231,7 +231,13 @@ export default function QuotePage() {
           <label className="consent">
             <input required type="checkbox" name="consent" value="Accepted" />
             <span>
-              I agree to be contacted regarding this project enquiry.
+                <span>
+  I agree to be contacted regarding this project enquiry and accept the{" "}
+  <Link href="/privacy" className="privacy-link">
+    Privacy Policy
+  </Link>
+  .
+</span>
             </span>
           </label>
 
@@ -572,7 +578,11 @@ export default function QuotePage() {
   text-decoration: none;
   font-size: 12px;
 }
-
+:global(.privacy-link) {
+  color: #36e4ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
         @media (max-width: 850px) {
           .quote-layout {
             margin-top: 55px;
