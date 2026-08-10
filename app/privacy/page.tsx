@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -142,10 +142,10 @@ export default function PrivacyPage() {
         .privacy-page {
           min-height: 100vh;
           padding: 18px 22px 50px;
-          color: #f7f8fa;
+          color: #f4efe5;
           background:
-            radial-gradient(circle at 82% 8%, rgba(155,108,255,.12), transparent 28%),
-            #0b0e14;
+            radial-gradient(circle at 82% 8%, rgba(115,101,78,.16), transparent 28%),
+            #191713;
           font-family: Inter, Arial, sans-serif;
         }
 
@@ -159,11 +159,11 @@ export default function PrivacyPage() {
           justify-content: space-between;
           border: 1px solid rgba(255,255,255,.11);
           border-radius: 19px;
-          background: rgba(17,21,29,.88);
+          background: rgba(36,32,26,.92);
         }
 
         .privacy-nav a {
-          color: #c3c9d2;
+          color: #d8cfc2;
           text-decoration: none;
           font-size: 12px;
         }
@@ -174,16 +174,7 @@ export default function PrivacyPage() {
           gap: 10px;
         }
 
-        .privacy-brand span {
-          width: 42px;
-          height: 42px;
-          display: grid;
-          place-items: center;
-          color: #101508;
-          border-radius: 12px;
-          background: #c6ff3d;
-          font-weight: 900;
-        }
+        .privacy-brand span {width:60px;height:60px;display:grid;place-items:center;color:#21180d;border:1px solid rgba(226,193,127,.72);border-radius:17px;background:linear-gradient(145deg,#efd598,#c9954b);box-shadow:0 12px 34px rgba(143,96,35,.25);font-family:Arial,sans-serif;font-size:20px;font-weight:900;font-style:normal;}
 
         .privacy-brand strong {
           color: white;
@@ -204,7 +195,7 @@ export default function PrivacyPage() {
         }
 
         .privacy-hero small {
-          color: #36e4ff;
+          color: #c99d58;
           font-size: 9px;
           letter-spacing: .18em;
         }
@@ -216,7 +207,7 @@ export default function PrivacyPage() {
         }
 
         .privacy-hero p {
-          color: #87909e;
+          color: #aaa093;
           font-size: 11px;
         }
 
@@ -231,13 +222,13 @@ export default function PrivacyPage() {
 
         .privacy-content h2 {
           margin: 0 0 13px;
-          color: #c6ff3d;
+          color: #d4ad68;
           font-size: 18px;
         }
 
         .privacy-content p,
         .privacy-content li {
-          color: #adb5c1;
+          color: #c7beb1;
           font-size: 14px;
           line-height: 1.8;
         }
@@ -248,14 +239,14 @@ export default function PrivacyPage() {
 
         .privacy-content a,
         .privacy-footer a {
-          color: #36e4ff;
+          color: #c99d58;
         }
 
         .privacy-footer {
           padding-top: 25px;
           display: flex;
           justify-content: space-between;
-          color: #78818e;
+          color: #9f9689;
           font-size: 11px;
         }
 

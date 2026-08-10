@@ -16,75 +16,102 @@ const socialPlatforms = [
 const services = [
   {
     index: "01",
-    code: "MKT",
-    title: "Performance Marketing",
-    copy: "Campaigns engineered to attract qualified traffic and turn ad spend into measurable growth.",
-    tags: ["Meta Ads", "Google Ads", "Retargeting"],
+    code: "STRATEGY",
+    title: "Digital Growth Strategy",
+    copy: "Research-led growth planning that connects your market, offer, funnel, channels and business objectives.",
+    tags: ["Digital audits", "Go-to-market", "Growth roadmaps"],
     accent: "lime",
   },
   {
     index: "02",
-    code: "WEB",
-    title: "Web Development",
-    copy: "Fast, conversion-focused websites and landing pages that make your business feel credible instantly.",
-    tags: ["Business sites", "Landing pages", "Speed"],
+    code: "SEO",
+    title: "SEO & Organic Growth",
+    copy: "Technical, on-page, local and content SEO designed to improve visibility, authority and qualified organic traffic.",
+    tags: ["Technical SEO", "Local SEO", "Search content"],
     accent: "cyan",
   },
   {
     index: "03",
-    code: "ECOM",
-    title: "E-commerce Growth",
-    copy: "Full-funnel store optimization—from product discovery and checkout to retention and repeat revenue.",
-    tags: ["Store CRO", "Acquisition", "Retention"],
+    code: "PPC",
+    title: "Paid Media — SEM & PPC",
+    copy: "Performance campaigns across search and social platforms, optimized around leads, sales and profitable acquisition.",
+    tags: ["Google Ads", "Meta Ads", "Retargeting"],
     accent: "violet",
   },
   {
     index: "04",
-    code: "DATA",
-    title: "Tracking & Analytics",
-    copy: "Reliable measurement that shows what is working, where leads come from and what to improve next.",
-    tags: ["GA4", "GTM", "Meta CAPI"],
+    code: "SOCIAL",
+    title: "Social Media Marketing",
+    copy: "Channel strategy, content calendars, publishing, community management and campaigns that build meaningful reach.",
+    tags: ["Management", "Campaigns", "Community"],
     accent: "cyan",
   },
   {
     index: "05",
-    code: "AI",
-    title: "AI & Automation",
-    copy: "Smart workflows that capture, qualify and follow up with leads while your team focuses on delivery.",
-    tags: ["CRM", "WhatsApp", "AI agents"],
+    code: "WEB",
+    title: "Website Design & Development",
+    copy: "Premium, responsive and conversion-focused websites engineered for credibility, speed and business growth.",
+    tags: ["Business websites", "Landing pages", "Web applications"],
     accent: "lime",
   },
   {
     index: "06",
-    code: "GROW",
-    title: "Growth Strategy",
-    copy: "A practical roadmap that connects your offer, creative, funnel, systems and scaling decisions.",
-    tags: ["Audit", "Funnels", "Scaling"],
+    code: "ECOM",
+    title: "E-commerce & CRO",
+    copy: "Store experiences optimized from product discovery and merchandising through checkout, retention and repeat revenue.",
+    tags: ["Shopify", "Store optimization", "Conversion rate"],
     accent: "violet",
   },
   {
     index: "07",
-    code: "BRAND",
-    title: "Brand & Graphic Design",
-    copy: "Distinctive brand systems and premium visuals that make every customer touchpoint feel consistent and memorable.",
-    tags: ["Brand identity", "Social design", "Ad creatives"],
+    code: "CREATIVE",
+    title: "Brand, Content & Creative",
+    copy: "A connected creative system covering brand identity, campaign concepts, copywriting, graphics and video marketing.",
+    tags: ["Brand design", "Copywriting", "Video content"],
     accent: "lime",
   },
   {
     index: "08",
-    code: "CREATIVE",
-    title: "Content & Creative Studio",
-    copy: "Scroll-stopping campaign concepts, product visuals and content systems designed to earn attention and drive action.",
-    tags: ["Content systems", "Motion", "Campaign creative"],
+    code: "CRM",
+    title: "Email, CRM & Lifecycle",
+    copy: "Automated customer journeys that nurture leads, improve retention and create more value from every relationship.",
+    tags: ["Email marketing", "CRM setup", "Lead nurturing"],
     accent: "cyan",
+  },
+  {
+    index: "09",
+    code: "AI",
+    title: "AI & Business Automation",
+    copy: "Intelligent workflows for lead capture, qualification, support, follow-up, reporting and repetitive business operations.",
+    tags: ["AI assistants", "Workflows", "WhatsApp automation"],
+    accent: "violet",
+  },
+  {
+    index: "10",
+    code: "DATA",
+    title: "Analytics, Tracking & Attribution",
+    copy: "Accurate measurement systems that connect customer activity, campaign performance and revenue-driving decisions.",
+    tags: ["GA4 & GTM", "Meta CAPI", "Dashboards"],
+    accent: "lime",
+  },
+  {
+    index: "11",
+    code: "ASO",
+    title: "ASO & Mobile Growth",
+    copy: "App store visibility and mobile acquisition strategies designed to increase qualified installs and user engagement.",
+    tags: ["App Store SEO", "Acquisition", "Optimization"],
+    accent: "cyan",
+  },
+  {
+    index: "12",
+    code: "PARTNER",
+    title: "Affiliate & Partnership Marketing",
+    copy: "Structured affiliate, creator and strategic partnership programs that expand reach with measurable accountability.",
+    tags: ["Affiliate systems", "Creators", "Partnerships"],
+    accent: "violet",
   },
 ];
 
-const creativeCapabilities = [
-  { number: "01", title: "Brand Identity", copy: "Logo direction, color systems, typography and practical brand rules." },
-  { number: "02", title: "Campaign Creative", copy: "Ad visuals, social posts, banners and high-impact launch assets." },
-  { number: "03", title: "Digital Experiences", copy: "Premium websites, motion details and conversion-focused interfaces." },
-];
 
 const faqs = [
   {
@@ -209,7 +236,7 @@ useEffect(() => {
         <nav className="nav-shell" aria-label="Main navigation">
           <a className="brand" href="#home" aria-label="MK Digital Labs home">
             <span className="brand-mark" aria-hidden="true"><span><b>M</b><b>K</b></span><i /></span>
-            <span className="brand-copy"><strong><b>MK</b> DIGITAL LABS</strong><small>Growth systems studio</small></span>
+            <span className="brand-copy"><strong><b>MK</b> DIGITAL LABS</strong><small>Your growth, our mission</small></span>
           </a>
 
           <button
@@ -228,7 +255,6 @@ useEffect(() => {
               {[
                 ["Home", "#home"],
                 ["Services", "#services"],
-                ["Creative", "#creative"],
                 ["System", "#system"],
                 ["Process", "#process"],
                 ["FAQ", "#faq"],
@@ -238,7 +264,10 @@ useEffect(() => {
                 <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
               ))}
             </div>
-        <a className="button button-nav" href="/quote"></a>
+        <a className="button button-nav" href="/quote">
+  <span>Request a project quote</span>
+  <i aria-hidden="true">↗</i>
+</a>
           </div>
         </nav>
       </header>
@@ -375,32 +404,7 @@ useEffect(() => {
           </div>
         </section>
 
-        <section className="section creative-section" id="creative">
-          <div className="container creative-layout reveal-scroll">
-            <div className="creative-showcase" aria-label="MK Digital Labs creative brand system preview">
-              <div className="creative-topline"><span>MK / CREATIVE LAB</span><i><b /> BRAND SYSTEM ONLINE</i></div>
-              <div className="creative-canvas">
-                <div className="creative-monogram"><small>MK</small><strong>Make it<br />unmistakable.</strong></div>
-                <div className="creative-palette" aria-label="Brand color palette"><i /><i /><i /><i /></div>
-                <div className="creative-poster"><span>BUILD</span><span>MARKET</span><span>AUTOMATE</span><strong>GROW.</strong></div>
-                <div className="creative-stamp">DESIGN<br />WITH<br />PURPOSE</div>
-              </div>
-              <div className="creative-footer"><span>IDENTITY</span><i /><span>CONTENT</span><i /><span>DIGITAL</span></div>
-            </div>
-
-            <div className="creative-copy">
-              <p className="section-tag"><span>02</span> CREATIVE & BRAND ENHANCEMENT</p>
-              <h2>Premium visuals.<br /><em>Built to perform.</em></h2>
-              <p>Strong growth needs more than traffic. We shape the identity, graphic language and digital experience that make people stop, trust and remember your business.</p>
-              <div className="creative-capabilities">
-                {creativeCapabilities.map((item) => (
-                  <article key={item.number}><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.copy}</p></div></article>
-                ))}
-              </div>
-              <a className="button button-outline" href="#contact"><span>Enhance my brand</span><i aria-hidden="true">↗</i></a>
-            </div>
-          </div>
-        </section>
+      
 
         <section className="section system-section" id="system">
           <div className="container system-layout reveal-scroll">
@@ -466,9 +470,89 @@ useEffect(() => {
         <section className="stack-section">
           <div className="container stack-layout reveal-scroll">
             <div><p className="section-tag"><span>04</span> OUR TOOLBOX</p><h2>Platform fluent.<br /><em>Outcome focused.</em></h2></div>
-            <div className="tool-cloud" aria-label="Platforms and tools we work with">
-              {["Meta Ads", "Google Ads", "GA4", "Google Tag Manager", "Meta Pixel", "Conversion API", "Figma", "Adobe Creative Cloud", "Canva Pro", "Next.js", "Shopify", "WordPress", "CRM Systems", "WhatsApp", "AI Agents", "Make / Zapier"].map((tool, index) => <span key={tool} className={[0, 6, 9, 14].includes(index) ? "featured" : ""}>{tool}</span>)}
-            </div>
+           <div className="tool-groups" aria-label="Professional platforms and tools">
+  {[
+    {
+      category: "Advertising & SEO",
+      tools: [
+        "Google Ads",
+        "Meta Ads Manager",
+        "LinkedIn Campaign Manager",
+        "TikTok Ads Manager",
+        "Google Search Console",
+        "Google Business Profile",
+        "Semrush",
+        "Ahrefs",
+        "Screaming Frog",
+      ],
+    },
+    {
+      category: "Analytics & CRO",
+      tools: [
+        "Google Analytics 4",
+        "Google Tag Manager",
+        "Looker Studio",
+        "Meta Pixel",
+        "Conversions API",
+        "Microsoft Clarity",
+        "Hotjar",
+      ],
+    },
+    {
+      category: "Web & E-commerce",
+      tools: [
+        "Next.js",
+        "Shopify",
+        "WordPress",
+        "WooCommerce",
+        "Webflow",
+        "Vercel",
+      ],
+    },
+    {
+      category: "CRM & Lifecycle",
+      tools: [
+        "HubSpot",
+        "Klaviyo",
+        "Mailchimp",
+        "Brevo",
+        "WhatsApp Business",
+      ],
+    },
+    {
+      category: "Automation & AI",
+      tools: [
+        "OpenAI",
+        "Claude",
+        "Gemini",
+        "Make",
+        "Zapier",
+        "n8n",
+        "AI Agents",
+      ],
+    },
+    {
+      category: "Creative & Video",
+      tools: [
+        "Figma",
+        "Adobe Creative Cloud",
+        "Canva Pro",
+        "Premiere Pro",
+        "After Effects",
+        "CapCut",
+      ],
+    },
+  ].map((group) => (
+    <div className="tool-group" key={group.category}>
+      <h3>{group.category}</h3>
+      <div className="tool-cloud">
+        {group.tools.map((tool) => (
+          <span key={tool}>{tool}</span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
           </div>
         </section>
 
@@ -544,7 +628,7 @@ useEffect(() => {
           <div className="footer-brand-block">
             <a className="brand brand-footer" href="#home" aria-label="MK Digital Labs home">
               <span className="brand-mark" aria-hidden="true"><span><b>M</b><b>K</b></span><i /></span>
-              <span className="brand-copy"><strong><b>MK</b> DIGITAL LABS</strong><small>Growth systems studio</small></span>
+              <span className="brand-copy"><strong><b>MK</b> DIGITAL LABS</strong><small>Your growth, our mission</small></span>
             </a>
             <p>Marketing, high-converting websites and intelligent automation—connected into one growth system.</p>
             <div className="social-block">
@@ -565,7 +649,20 @@ useEffect(() => {
         <div className="container footer-bottom"><span>© {new Date().getFullYear()} MK Digital Labs. All rights reserved.</span><a href="/privacy">PRIVACY POLICY</a><span>PAKISTAN <i /> WORLDWIDE</span><a href="#home">BACK TO TOP ↑</a></div>
       </footer>
 
-      <a className="whatsapp-float" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chat with MK Digital Labs on WhatsApp"><i>WA</i><span>Let&apos;s talk</span></a>
+   <a
+  className="whatsapp-float"
+  href={whatsapp}
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Chat with MK Digital Labs on WhatsApp"
+>
+  <i aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2a9.84 9.84 0 0 0-8.43 14.91L2 22l5.22-1.57A9.94 9.94 0 1 0 12.04 2Zm0 17.88a8 8 0 0 1-4.08-1.12l-.29-.17-3.1.93.96-3.02-.19-.31a7.87 7.87 0 1 1 6.7 3.69Zm4.37-5.89c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+    </svg>
+  </i>
+  <span>Chat on WhatsApp</span>
+</a>
     </>
   );
 }

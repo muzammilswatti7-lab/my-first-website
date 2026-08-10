@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useMemo, useState } from "react";
 
@@ -233,9 +233,9 @@ export default function GrowthAssistant() {
           display: flex;
           flex-direction: column;
           color: #f7f8fa;
-          border: 1px solid rgba(198, 255, 61, 0.24);
+          border: 1px solid rgba(199, 163, 106, 0.24);
           border-radius: 22px;
-          background: #10141c;
+          background: #24211d;
           box-shadow: 0 30px 90px rgba(0, 0, 0, 0.48);
           animation: assistantIn 240ms ease-out;
         }
@@ -247,8 +247,8 @@ export default function GrowthAssistant() {
           gap: 11px;
           border-bottom: 1px solid rgba(255, 255, 255, 0.09);
           background:
-            radial-gradient(circle at 10% 0%, rgba(198, 255, 61, 0.14), transparent 45%),
-            #151a23;
+            radial-gradient(circle at 10% 0%, rgba(199, 163, 106, 0.14), transparent 45%),
+            #2d2923;
         }
 
         .assistant-avatar,
@@ -256,7 +256,7 @@ export default function GrowthAssistant() {
           display: grid;
           place-items: center;
           color: #101508;
-          background: linear-gradient(135deg, #d2ff58, #aaf126);
+          background: linear-gradient(135deg, #e0c28e, #bd9454);
           font-weight: 900;
         }
 
@@ -277,7 +277,7 @@ export default function GrowthAssistant() {
         }
 
         .assistant-header span {
-          color: #9fa8b6;
+          color: #b8afa1;
           font-size: 10px;
         }
 
@@ -287,14 +287,14 @@ export default function GrowthAssistant() {
           margin-right: 5px;
           display: inline-block;
           border-radius: 50%;
-          background: #baff2c;
-          box-shadow: 0 0 10px #baff2c;
+          background: #c7a36a;
+          box-shadow: 0 0 10px #c7a36a;
         }
 
         .close-button {
           width: 33px;
           height: 33px;
-          color: #c9ced7;
+          color: #ddd5c8;
           border: 0;
           border-radius: 9px;
           background: rgba(255, 255, 255, 0.06);
@@ -306,7 +306,7 @@ export default function GrowthAssistant() {
           padding: 15px;
           overflow-y: auto;
           scrollbar-width: thin;
-          scrollbar-color: #394253 transparent;
+          scrollbar-color: #5a5044 transparent;
         }
 
         .message {
@@ -326,21 +326,21 @@ export default function GrowthAssistant() {
         .message small {
           display: block;
           margin-bottom: 6px;
-          color: #baff2c;
+          color: #c7a36a;
           font-size: 8px;
           letter-spacing: 1.3px;
         }
 
         .assistant-message {
           border: 1px solid rgba(255, 255, 255, 0.08);
-          background: #191f2a;
+          background: #332f29;
           border-bottom-left-radius: 5px;
         }
 
         .user-message {
           margin-left: auto;
           color: #101508;
-          background: #baff2c;
+          background: #c7a36a;
           border-bottom-right-radius: 5px;
           font-weight: 700;
         }
@@ -357,10 +357,10 @@ export default function GrowthAssistant() {
           display: flex;
           align-items: center;
           gap: 10px;
-          color: #e9edf4;
+          color: #f4efe5;
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 11px;
-          background: #171d27;
+          background: #2b2823;
           text-align: left;
           font-size: 12px;
           cursor: pointer;
@@ -369,8 +369,8 @@ export default function GrowthAssistant() {
 
         .topic-button:hover,
         .goal-button:hover {
-          border-color: rgba(198, 255, 61, 0.55);
-          background: #1d2530;
+          border-color: rgba(199, 163, 106, 0.55);
+          background: #3a342c;
           transform: translateX(3px);
         }
 
@@ -379,16 +379,16 @@ export default function GrowthAssistant() {
           height: 28px;
           display: grid;
           place-items: center;
-          color: #baff2c;
+          color: #c7a36a;
           border-radius: 8px;
-          background: rgba(198, 255, 61, 0.08);
+          background: rgba(199, 163, 106, 0.08);
           font-size: 10px;
           font-weight: 800;
         }
 
         .question-label {
           margin: 14px 0 9px;
-          color: #abb3c0;
+          color: #b8afa1;
           font-size: 11px;
         }
 
@@ -398,7 +398,7 @@ export default function GrowthAssistant() {
         }
 
         .goal-button span {
-          color: #baff2c;
+          color: #c7a36a;
         }
 
         .assistant-form {
@@ -415,12 +415,12 @@ export default function GrowthAssistant() {
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 11px;
           outline: none;
-          background: #0d1118;
+          background: #211f1b;
           font-size: 12px;
         }
 
         .assistant-form input:focus {
-          border-color: #baff2c;
+          border-color: #c7a36a;
         }
 
         .assistant-form button {
@@ -428,7 +428,7 @@ export default function GrowthAssistant() {
           color: #101508;
           border: 0;
           border-radius: 11px;
-          background: #baff2c;
+          background: #c7a36a;
           font-weight: 900;
           cursor: pointer;
         }
@@ -440,7 +440,7 @@ export default function GrowthAssistant() {
           justify-content: space-between;
           color: #07140d;
           border-radius: 11px;
-          background: #25d366;
+          background: #9eaa91;
           text-decoration: none;
           font-size: 12px;
           font-weight: 900;
@@ -449,7 +449,7 @@ export default function GrowthAssistant() {
         .restart-button {
           margin-top: 14px;
           padding: 0;
-          color: #aab2bf;
+          color: #b8afa1;
           border: 0;
           background: transparent;
           font-size: 10px;
@@ -458,7 +458,7 @@ export default function GrowthAssistant() {
 
         .assistant-footer {
           padding: 10px;
-          color: #747e8d;
+          color: #8f877c;
           border-top: 1px solid rgba(255, 255, 255, 0.07);
           text-align: center;
           font-size: 9px;
@@ -472,9 +472,9 @@ export default function GrowthAssistant() {
           align-items: center;
           gap: 10px;
           color: white;
-          border: 1px solid rgba(198, 255, 61, 0.35);
+          border: 1px solid rgba(199, 163, 106, 0.35);
           border-radius: 18px;
-          background: #131923;
+          background: #2d2923;
           box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
           cursor: pointer;
         }
@@ -496,7 +496,7 @@ export default function GrowthAssistant() {
         }
 
         .launcher-copy small {
-          color: #9ca5b3;
+          color: #aaa194;
           font-size: 9px;
         }
 

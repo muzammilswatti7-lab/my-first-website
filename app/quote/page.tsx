@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
@@ -39,7 +39,7 @@ export default function QuotePage() {
           <span>MK</span>
           <div>
             <strong>MK DIGITAL LABS</strong>
-            <small>GROWTH SYSTEMS STUDIO</small>
+            <small>YOUR GROWTH, OUR MISSION</small>
           </div>
         </Link>
 
@@ -272,11 +272,11 @@ export default function QuotePage() {
           min-height: 100vh;
           padding: 18px 22px 70px;
                     overflow: hidden;
-          color: #f7f8fa;
+          color: #f4efe5;
           background:
-            radial-gradient(circle at 12% 85%, rgba(54,228,255,.1), transparent 30%),
-            radial-gradient(circle at 86% 12%, rgba(155,108,255,.13), transparent 32%),
-            #0b0e14;
+            radial-gradient(circle at 12% 85%, rgba(201,157,88,.12), transparent 30%),
+            radial-gradient(circle at 86% 12%, rgba(115,101,78,.16), transparent 32%),
+            #191713;
           font-family: Inter, Arial, sans-serif;
         }
 
@@ -290,7 +290,7 @@ export default function QuotePage() {
           justify-content: space-between;
           border: 1px solid rgba(255,255,255,.11);
           border-radius: 20px;
-          background: rgba(17,21,29,.87);
+          background: rgba(36,32,26,.92);
           backdrop-filter: blur(16px);
         }
 
@@ -302,28 +302,19 @@ export default function QuotePage() {
           text-decoration: none;
         }
 
-        .quote-brand > span {
-          width: 46px;
-          height: 46px;
-          display: grid;
-          place-items: center;
-          color: #101508;
-          border-radius: 14px;
-          background: linear-gradient(135deg, #d1ff56, #aef229);
-          font-weight: 900;
-        }
+        .quote-brand > span {width:60px;height:60px;display:grid;place-items:center;flex:0 0 auto;color:#21180d;border:1px solid rgba(226,193,127,.72);border-radius:17px;background:linear-gradient(145deg,#efd598,#c9954b);box-shadow:0 12px 34px rgba(143,96,35,.25);font-family:Arial,sans-serif;font-size:20px;font-weight:900;font-style:normal;}
 
         .quote-brand div { display: grid; gap: 5px; }
         .quote-brand strong { font-size: 14px; letter-spacing: .06em; }
-        .quote-brand small { color: #818a98; font-size: 8px; letter-spacing: .2em; }
+        .quote-brand small { color: #a89e90; font-size: 8px; letter-spacing: .2em; }
 
         .back-link {
-          color: #b5bdc9;
+          color: #c8beb0;
           text-decoration: none;
           font-size: 12px;
         }
 
-        .back-link:hover { color: #c6ff3d; }
+        .back-link:hover { color: #d4ad68; }
 
         .quote-layout {
           width: min(1180px, 100%);
@@ -340,7 +331,7 @@ export default function QuotePage() {
           display: flex;
           align-items: center;
           gap: 8px;
-          color: #c4cad3;
+          color: #d8cfc2;
           border: 1px solid rgba(255,255,255,.11);
           border-radius: 99px;
           font-size: 9px;
@@ -351,8 +342,8 @@ export default function QuotePage() {
           width: 7px;
           height: 7px;
           border-radius: 50%;
-          background: #c6ff3d;
-          box-shadow: 0 0 12px #c6ff3d;
+          background: #d4ad68;
+          box-shadow: 0 0 12px #d4ad68;
         }
 
         .quote-copy h1 {
@@ -364,14 +355,14 @@ export default function QuotePage() {
 
         .quote-copy h1 span {
           color: transparent;
-          background: linear-gradient(90deg, #c6ff3d, #36e4ff, #9b6cff);
+          background: linear-gradient(90deg, #d4ad68, #c99d58, #8d7358);
           background-clip: text;
           -webkit-background-clip: text;
         }
 
         .quote-copy > p {
           max-width: 530px;
-          color: #aeb6c2;
+          color: #bdb3a5;
           font-size: 16px;
           line-height: 1.75;
         }
@@ -397,27 +388,27 @@ export default function QuotePage() {
           height: 34px;
           display: grid;
           place-items: center;
-          color: #c6ff3d;
+          color: #d4ad68;
           border-radius: 9px;
-          background: rgba(198,255,61,.07);
+          background: rgba(212,173,104,.10);
           font-size: 10px;
         }
 
         .process-list div { display: grid; gap: 4px; }
         .process-list strong { font-size: 12px; }
-        .process-list span { color: #818b99; font-size: 10px; }
+        .process-list span { color: #a89e90; font-size: 10px; }
 
         .direct-contact {
           margin-top: 25px;
           display: grid;
           gap: 7px;
-          color: #7e8794;
+          color: #a2998c;
           font-size: 10px;
         }
 
         .direct-contact a {
           width: fit-content;
-          color: #36e4ff;
+          color: #c99d58;
           text-decoration: none;
           font-size: 12px;
           font-weight: 700;
@@ -427,7 +418,7 @@ export default function QuotePage() {
           padding: 25px;
           border: 1px solid rgba(255,255,255,.11);
           border-radius: 22px;
-          background: rgba(18,23,32,.91);
+          background: rgba(43,38,31,.96);
           box-shadow: 0 30px 90px rgba(0,0,0,.3);
         }
 
@@ -438,13 +429,13 @@ export default function QuotePage() {
           align-items: start;
         }
 
-        .form-header small { color: #36e4ff; font-size: 8px; letter-spacing: .18em; }
+        .form-header small { color: #c99d58; font-size: 8px; letter-spacing: .18em; }
         .form-header h2 { margin: 7px 0 0; font-size: 25px; }
 
         .form-header > span {
           padding: 7px 9px;
-          color: #c6ff3d;
-          border: 1px solid rgba(198,255,61,.22);
+          color: #d4ad68;
+          border: 1px solid rgba(212,173,104,.35);
           border-radius: 8px;
           font-size: 8px;
         }
@@ -458,28 +449,28 @@ export default function QuotePage() {
         label {
           display: grid;
           gap: 7px;
-          color: #b7bec9;
+          color: #d5ccbf;
           font-size: 10px;
         }
 
         input, select, textarea {
           width: 100%;
           padding: 13px;
-          color: #f7f8fa;
+          color: #f4efe5;
           border: 1px solid rgba(255,255,255,.11);
           border-radius: 10px;
           outline: none;
-          background: #0c1017;
+          background: #171511;
           font: inherit;
           font-size: 12px;
         }
 
         input:focus, select:focus, textarea:focus {
-          border-color: #36e4ff;
-          box-shadow: 0 0 0 3px rgba(54,228,255,.07);
+          border-color: #c99d58;
+          box-shadow: 0 0 0 3px rgba(201,157,88,.10);
         }
 
-        option { background: #10151e; }
+        option { background: #211e19; }
         .full-field { margin-top: 14px; }
         textarea { resize: vertical; line-height: 1.55; }
 
@@ -493,10 +484,10 @@ export default function QuotePage() {
         .consent input {
           width: 16px;
           height: 16px;
-          accent-color: #c6ff3d;
+          accent-color: #d4ad68;
         }
 
-        .consent span { color: #848e9c; font-size: 9px; }
+        .consent span { color: #aaa093; font-size: 9px; }
 
         .submit-button {
           width: 100%;
@@ -505,10 +496,10 @@ export default function QuotePage() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          color: #101508;
+          color: #21180d;
           border: 0;
           border-radius: 12px;
-          background: linear-gradient(135deg, #d0ff53, #aef229);
+          background: linear-gradient(135deg, #e2c17f, #bd8b43);
           font-size: 12px;
           font-weight: 900;
           cursor: pointer;
@@ -529,12 +520,12 @@ export default function QuotePage() {
         .form-status {
           min-height: 17px;
           margin-top: 10px;
-          color: #7e8896;
+          color: #a2998c;
           text-align: center;
           font-size: 9px;
         }
 
-        .form-status.success { color: #c6ff3d; }
+        .form-status.success { color: #d4ad68; }
         .form-status.error { color: #ff7b7b; }
         :global(.quote-brand) {
   display: flex;
@@ -544,17 +535,7 @@ export default function QuotePage() {
   text-decoration: none;
 }
 
-:global(.quote-brand > span) {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  color: #101508;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #d1ff56, #aef229);
-  font-weight: 900;
-}
+:global(.quote-brand > span){width:60px;height:60px;display:grid;place-items:center;flex:0 0 auto;color:#21180d;border-radius:17px;background:linear-gradient(145deg,#efd598,#c9954b);font-size:20px;font-weight:900;font-style:normal;}
 
 :global(.quote-brand div) {
   display: grid;
@@ -568,18 +549,18 @@ export default function QuotePage() {
 
 :global(.quote-brand small) {
   display: block;
-  color: #818a98;
+  color: #a89e90;
   font-size: 8px;
   letter-spacing: .2em;
 }
 
 :global(.back-link) {
-  color: #b5bdc9;
+  color: #c8beb0;
   text-decoration: none;
   font-size: 12px;
 }
 :global(.privacy-link) {
-  color: #36e4ff;
+  color: #c99d58;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -605,3 +586,4 @@ export default function QuotePage() {
     </main>
   );
 }
+
