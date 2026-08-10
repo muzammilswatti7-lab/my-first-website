@@ -6,11 +6,11 @@ const whatsapp =
   "https://wa.me/923153063373?text=Hello%20MK%20Digital%20Labs%2C%20I%20want%20to%20discuss%20my%20business%20growth.";
 
 const socialPlatforms = [
-  { label: "Instagram", mark: "â—Ž", className: "instagram" },
+  { label: "Instagram", mark: "◎", className: "instagram" },
   { label: "Facebook", mark: "f", className: "facebook" },
   { label: "LinkedIn", mark: "in", className: "linkedin" },
-  { label: "YouTube", mark: "â–¶", className: "youtube" },
-  { label: "TikTok", mark: "â™ª", className: "tiktok" },
+  { label: "YouTube", mark: "▶", className: "youtube" },
+  { label: "TikTok", mark: "♪", className: "tiktok" },
 ];
 
 const services = [
@@ -33,7 +33,7 @@ const services = [
   {
     index: "03",
     code: "PPC",
-    title: "Paid Media â€” SEM & PPC",
+    title: "Paid Media — SEM & PPC",
     copy: "Performance campaigns across search and social platforms, optimized around leads, sales and profitable acquisition.",
     tags: ["Google Ads", "Meta Ads", "Retargeting"],
     accent: "violet",
@@ -266,7 +266,7 @@ useEffect(() => {
             </div>
         <a className="button button-nav" href="/quote">
   <span>Request a project quote</span>
-  <i aria-hidden="true">â†—</i>
+  <i aria-hidden="true">↗</i>
 </a>
           </div>
         </nav>
@@ -289,22 +289,22 @@ useEffect(() => {
                 <span className="gradient-text">You scale the business.</span>
               </h1>
               <p className="hero-copy reveal-three">
-                Marketing, high-converting websites, e-commerce, analytics and AI automationâ€”connected into one growth engine built around your business.
+                Marketing, high-converting websites, e-commerce, analytics and AI automation—connected into one growth engine built around your business.
               </p>
 
               <div className="hero-actions reveal-four">
                <a className="button button-primary magnetic" href="/quote">
-                  <span>Build my growth engine</span><i aria-hidden="true">â†’</i>
+                  <span>Build my growth engine</span><i aria-hidden="true">→</i>
                 </a>
                 <a className="text-link" href="#services">
-                  Explore our capabilities <span aria-hidden="true">â†“</span>
+                  Explore our capabilities <span aria-hidden="true">↓</span>
                 </a>
               </div>
 
               <div className="hero-trust reveal-four" aria-label="Service benefits">
-                <div><i>âœ“</i><span><strong>One partner</strong><small>Strategy to execution</small></span></div>
-                <div><i>âœ“</i><span><strong>Clear reporting</strong><small>Decisions backed by data</small></span></div>
-                <div><i>âœ“</i><span><strong>Built to scale</strong><small>Systems, not quick fixes</small></span></div>
+                <div><i>✓</i><span><strong>One partner</strong><small>Strategy to execution</small></span></div>
+                <div><i>✓</i><span><strong>Clear reporting</strong><small>Decisions backed by data</small></span></div>
+                <div><i>✓</i><span><strong>Built to scale</strong><small>Systems, not quick fixes</small></span></div>
               </div>
               <div className="hero-stats" ref={statsRef} aria-label="MK Digital Labs capabilities">
   <div className="hero-stat">
@@ -345,7 +345,7 @@ useEffect(() => {
                     <div className="engine-step" key={number}>
                       <span className="step-number">{number}</span>
                       <div><strong>{label}</strong><small>{note}</small></div>
-                      {index < 2 && <i className="flow-arrow" aria-hidden="true">â†’</i>}
+                      {index < 2 && <i className="flow-arrow" aria-hidden="true">→</i>}
                     </div>
                   ))}
                 </div>
@@ -366,8 +366,8 @@ useEffect(() => {
                 </div>
               </div>
 
-              <div className="float-chip chip-left"><span>â†—</span><div><small>CONVERSION</small><strong>Optimized</strong></div></div>
-              <div className="float-chip chip-right"><span>â—Ž</span><div><small>AUTOMATION</small><strong>Always on</strong></div></div>
+              <div className="float-chip chip-left"><span>↗</span><div><small>CONVERSION</small><strong>Optimized</strong></div></div>
+              <div className="float-chip chip-right"><span>◎</span><div><small>AUTOMATION</small><strong>Always on</strong></div></div>
             </div>
           </div>
 
@@ -377,7 +377,7 @@ useEffect(() => {
         <section className="ticker" aria-label="Core capabilities">
           <div className="ticker-track">
             {["PERFORMANCE MARKETING", "WEB DEVELOPMENT", "BRAND DESIGN", "AI AUTOMATION", "E-COMMERCE GROWTH", "CREATIVE STUDIO", "TRACKING & ANALYTICS", "GROWTH STRATEGY", "PERFORMANCE MARKETING", "WEB DEVELOPMENT", "BRAND DESIGN", "AI AUTOMATION"].map((item, index) => (
-              <span key={`${item}-${index}`}>{item}<i>âœ¦</i></span>
+              <span key={`${item}-${index}`}>{item}<i>✦</i></span>
             ))}
           </div>
         </section>
@@ -392,7 +392,7 @@ useEffect(() => {
             <div className="services-grid">
               {services.map((service) => (
                 <article className={`service-card ${service.accent}`} key={service.title}>
-                  <div className="service-top"><span>{service.index}</span><i aria-hidden="true">â†—</i></div>
+                  <div className="service-top"><span>{service.index}</span><i aria-hidden="true">↗</i></div>
                   <div className="service-code">{service.code}</div>
                   <h3>{service.title}</h3>
                   <p>{service.copy}</p>
@@ -412,7 +412,7 @@ useEffect(() => {
               <p className="section-tag"><span>02</span> THE MK SYSTEM</p>
               <h2>Not random services.<br /><em>One connected engine.</em></h2>
               <p>Growth slows down when your ads, website, data and follow-up tools work in isolation. We connect the full customer journey so each piece makes the next one stronger.</p>
-              <a className="text-link system-link" href="#process">See how we build it <span aria-hidden="true">â†“</span></a>
+              <a className="text-link system-link" href="#process">See how we build it <span aria-hidden="true">↓</span></a>
             </div>
 
             <div className="system-map" aria-label="Connected growth system">
@@ -459,10 +459,10 @@ useEffect(() => {
             </div>
 
             <div className="promise-grid reveal-scroll">
-              <article><span>âœ“</span><div><h3>Business-first strategy</h3><p>Every decision starts with your goals, audience and offer.</p></div></article>
-              <article><span>âœ“</span><div><h3>Clear communication</h3><p>Simple updates, transparent work and no unnecessary jargon.</p></div></article>
-              <article><span>âœ“</span><div><h3>Built for conversion</h3><p>Design and campaigns focused on real customer action.</p></div></article>
-              <article><span>âœ“</span><div><h3>Ready to scale</h3><p>Systems designed to grow with your business.</p></div></article>
+              <article><span>✓</span><div><h3>Business-first strategy</h3><p>Every decision starts with your goals, audience and offer.</p></div></article>
+              <article><span>✓</span><div><h3>Clear communication</h3><p>Simple updates, transparent work and no unnecessary jargon.</p></div></article>
+              <article><span>✓</span><div><h3>Built for conversion</h3><p>Design and campaigns focused on real customer action.</p></div></article>
+              <article><span>✓</span><div><h3>Ready to scale</h3><p>Systems designed to grow with your business.</p></div></article>
             </div>
           </div>
         </section>
@@ -562,7 +562,7 @@ useEffect(() => {
               <p className="section-tag"><span>05</span> FAQ</p>
               <h2>Before we build,<br /><em>let&apos;s make it clear.</em></h2>
               <p>Have a question that is not here? Send us a WhatsApp message and we will point you in the right direction.</p>
-              <a className="text-link system-link" href={whatsapp} target="_blank" rel="noreferrer">Ask on WhatsApp <span aria-hidden="true">â†—</span></a>
+              <a className="text-link system-link" href={whatsapp} target="_blank" rel="noreferrer">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
             </div>
             <div className="faq-list reveal-scroll">
               {faqs.map((faq, index) => (
@@ -583,11 +583,11 @@ useEffect(() => {
             <div className="contact-copy">
               <p className="section-tag"><span>06</span> START A CONVERSATION</p>
               <h2>Your next stage of growth starts with <em>one clear move.</em></h2>
-              <p>Tell us what you want to improve. We will review your needs and suggest the most practical next stepâ€”without the confusing agency talk.</p>
+              <p>Tell us what you want to improve. We will review your needs and suggest the most practical next step—without the confusing agency talk.</p>
               <div className="contact-options">
-                <a href="mailto:muzammilswatti7@gmail.com"><span>EMAIL</span><strong>muzammilswatti7@gmail.com</strong><i>â†—</i></a>
-                <a href={whatsapp} target="_blank" rel="noreferrer"><span>WHATSAPP</span><strong>+92 315 3063373</strong><i>â†—</i></a>
-                <div><span>LOCATION</span><strong>Pakistan Â· Serving worldwide</strong><i>â—Ž</i></div>
+                <a href="mailto:muzammilswatti7@gmail.com"><span>EMAIL</span><strong>muzammilswatti7@gmail.com</strong><i>↗</i></a>
+                <a href={whatsapp} target="_blank" rel="noreferrer"><span>WHATSAPP</span><strong>+92 315 3063373</strong><i>↗</i></a>
+                <div><span>LOCATION</span><strong>Pakistan · Serving worldwide</strong><i>◎</i></div>
               </div>
             </div>
 
@@ -602,7 +602,7 @@ useEffect(() => {
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="New Lead From MK Digital Labs" />
               <button className="button button-primary form-submit" type="submit" disabled={formState === "sending"}>
-                <span>{formState === "sending" ? "Sending your details..." : formState === "success" ? "Project details received" : "Send your project details"}</span><i>{formState === "success" ? "âœ“" : "â†’"}</i>
+                <span>{formState === "sending" ? "Sending your details..." : formState === "success" ? "Project details received" : "Send your project details"}</span><i>{formState === "success" ? "✓" : "→"}</i>
               </button>
               <div className={`form-status ${formState}`} aria-live="polite">
                 {formState === "success" && "Thank you! We will contact you shortly by email or WhatsApp."}
@@ -622,7 +622,7 @@ useEffect(() => {
             <p><span /> READY FOR YOUR NEXT MOVE?</p>
             <h2>Let&apos;s build a brand<br />people <em>remember.</em></h2>
           </div>
-          <a className="button button-primary footer-cta-button" href="#contact"><span>Start your growth project</span><i aria-hidden="true">â†—</i></a>
+          <a className="button button-primary footer-cta-button" href="#contact"><span>Start your growth project</span><i aria-hidden="true">↗</i></a>
         </div>
         <div className="container footer-main">
           <div className="footer-brand-block">
@@ -630,12 +630,12 @@ useEffect(() => {
               <span className="brand-mark" aria-hidden="true"><span><b>M</b><b>K</b></span><i /></span>
               <span className="brand-copy"><strong><b>MK</b> DIGITAL LABS</strong><small>Your growth, our mission</small></span>
             </a>
-            <p>Marketing, high-converting websites and intelligent automationâ€”connected into one growth system.</p>
+            <p>Marketing, high-converting websites and intelligent automation—connected into one growth system.</p>
             <div className="social-block">
               <span className="social-label">FIND MK DIGITAL LABS ONLINE</span>
               <div className="social-row" aria-label="MK Digital Labs social platforms">
                 {socialPlatforms.map((social) => (
-                  <span className={`social-link ${social.className}`} key={social.label} title={`${social.label} â€” profile link coming soon`}>
+                  <span className={`social-link ${social.className}`} key={social.label} title={`${social.label} — profile link coming soon`}>
                     <i aria-hidden="true">{social.mark}</i><b>{social.label}</b>
                   </span>
                 ))}
@@ -646,7 +646,7 @@ useEffect(() => {
           <div className="footer-nav"><span>EXPLORE</span><a href="#services">Services</a><a href="#system">Our system</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
           <div className="footer-nav"><span>CONTACT</span><a href="mailto:muzammilswatti7@gmail.com">Email us</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="#contact">Start a project</a></div>
         </div>
-        <div className="container footer-bottom"><span>Â© {new Date().getFullYear()} MK Digital Labs. All rights reserved.</span><a href="/privacy">PRIVACY POLICY</a><span>PAKISTAN <i /> WORLDWIDE</span><a href="#home">BACK TO TOP â†‘</a></div>
+        <div className="container footer-bottom"><span>© {new Date().getFullYear()} MK Digital Labs. All rights reserved.</span><a href="/privacy">PRIVACY POLICY</a><span>PAKISTAN <i /> WORLDWIDE</span><a href="#home">BACK TO TOP ↑</a></div>
       </footer>
 
    <a
