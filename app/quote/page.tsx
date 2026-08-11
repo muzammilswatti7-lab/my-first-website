@@ -1,36 +1,31 @@
 "use client";
 import "./quote.css";
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+import { FormState, submitForm } from "../lib/forms";
 
-type FormState = "idle" | "sending" | "success" | "error";
+const steps = [
+  ["01", "Share your goals", "Tell us what you want to improve."],
+  ["02", "Get a strategic review", "We identify the right services and priorities."],
+  ["03", "Receive your next steps", "We contact you through email or WhatsApp."],
+];
+
+const textFields = [
+  ["Your name", "name", "text", "Full name"],
+  ["Business name", "business", "text", "Company or brand"],
+  ["Email address", "email", "email", "name@company.com"],
+  ["Phone / WhatsApp", "phone", "tel", "+92..."],
+];
+
+const selectFields = [
+  ["Service required", "service", "Select a service", ["Digital Marketing", "Website Development", "E-commerce Growth", "AI & Automation", "Tracking & Analytics", "Brand & Creative", "Complete Growth System"]],
+  ["Project timeline", "timeline", "Select timeline", ["As soon as possible", "Within 2–4 weeks", "Within 1–2 months", "Still planning"]],
+  ["Investment range", "budget", "Select a range", ["Need a recommendation", "Starter project", "Growth project", "Complete custom system"]],
+  ["Main business goal", "goal", "Select your goal", ["Generate qualified leads", "Increase online sales", "Build a stronger digital presence", "Improve tracking and reporting", "Automate sales and follow-ups"]],
+] as const;
 
 export default function QuotePage() {
   const [formState, setFormState] = useState<FormState>("idle");
-
-  async function submitQuote(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    setFormState("sending");
-
-    try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/muzammilswatti7@gmail.com",
-        {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(form),
-        }
-      );
-
-      if (!response.ok) throw new Error("Submission failed");
-
-      form.reset();
-      setFormState("success");
-    } catch {
-      setFormState("error");
-    }
-  }
 
   return (
     <main className="quote-page">
@@ -66,29 +61,12 @@ export default function QuotePage() {
           </p>
 
           <div className="process-list">
-            <article>
-              <b>01</b>
-              <div>
-                <strong>Share your goals</strong>
-                <span>Tell us what you want to improve.</span>
-              </div>
-            </article>
-
-            <article>
-              <b>02</b>
-              <div>
-                <strong>Get a strategic review</strong>
-                <span>We identify the right services and priorities.</span>
-              </div>
-            </article>
-
-            <article>
-              <b>03</b>
-              <div>
-                <strong>Receive your next steps</strong>
-                <span>We contact you through email or WhatsApp.</span>
-              </div>
-            </article>
+            {steps.map(([number, title, copy]) => (
+              <article key={number}>
+                <b>{number}</b>
+                <div><strong>{title}</strong><span>{copy}</span></div>
+              </article>
+            ))}
           </div>
 
           <div className="direct-contact">
@@ -103,7 +81,7 @@ export default function QuotePage() {
           </div>
         </div>
 
-        <form className="quote-form" onSubmit={submitQuote}>
+        <form className="quote-form" onSubmit={(event) => submitForm(event, setFormState)}>
           <input
             type="hidden"
             name="_subject"
@@ -121,101 +99,17 @@ export default function QuotePage() {
           </header>
 
           <div className="form-grid">
-            <label>
-              Your name
-              <input
-                required
-                name="name"
-                type="text"
-                placeholder="Full name"
-              />
-            </label>
-
-            <label>
-              Business name
-              <input
-                required
-                name="business"
-                type="text"
-                placeholder="Company or brand"
-              />
-            </label>
-
-            <label>
-              Email address
-              <input
-                required
-                name="email"
-                type="email"
-                placeholder="name@company.com"
-              />
-            </label>
-
-            <label>
-              Phone / WhatsApp
-              <input
-                required
-                name="phone"
-                type="tel"
-                placeholder="+92..."
-              />
-            </label>
-
-            <label>
-              Service required
-              <select required name="service" defaultValue="">
-                <option value="" disabled>
-                  Select a service
-                </option>
-                <option>Digital Marketing</option>
-                <option>Website Development</option>
-                <option>E-commerce Growth</option>
-                <option>AI & Automation</option>
-                <option>Tracking & Analytics</option>
-                <option>Brand & Creative</option>
-                <option>Complete Growth System</option>
-              </select>
-            </label>
-
-            <label>
-              Project timeline
-              <select required name="timeline" defaultValue="">
-                <option value="" disabled>
-                  Select timeline
-                </option>
-                <option>As soon as possible</option>
-                <option>Within 2–4 weeks</option>
-                <option>Within 1–2 months</option>
-                <option>Still planning</option>
-              </select>
-            </label>
-
-            <label>
-              Investment range
-              <select required name="budget" defaultValue="">
-                <option value="" disabled>
-                  Select a range
-                </option>
-                <option>Need a recommendation</option>
-                <option>Starter project</option>
-                <option>Growth project</option>
-                <option>Complete custom system</option>
-              </select>
-            </label>
-
-            <label>
-              Main business goal
-              <select required name="goal" defaultValue="">
-                <option value="" disabled>
-                  Select your goal
-                </option>
-                <option>Generate qualified leads</option>
-                <option>Increase online sales</option>
-                <option>Build a stronger digital presence</option>
-                <option>Improve tracking and reporting</option>
-                <option>Automate sales and follow-ups</option>
-              </select>
-            </label>
+            {textFields.map(([label, name, type, placeholder]) => (
+              <label key={name}>{label}<input required name={name} type={type} placeholder={placeholder} /></label>
+            ))}
+            {selectFields.map(([label, name, placeholder, options]) => (
+              <label key={name}>{label}
+                <select required name={name} defaultValue="">
+                  <option value="" disabled>{placeholder}</option>
+                  {options.map((option) => <option key={option}>{option}</option>)}
+                </select>
+              </label>
+            ))}
           </div>
 
           <label className="full-field">
@@ -271,4 +165,3 @@ export default function QuotePage() {
     </main>
   );
 }
-

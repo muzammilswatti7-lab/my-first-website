@@ -1,6 +1,7 @@
 ﻿"use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { FormState, submitForm } from "./lib/forms";
 
 const whatsapp =
   "https://wa.me/923153063373?text=Hello%20MK%20Digital%20Labs%2C%20I%20want%20to%20discuss%20my%20business%20growth.";
@@ -140,7 +141,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [formState, setFormState] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [formState, setFormState] = useState<FormState>("idle");
   const [statValues, setStatValues] = useState([0, 0, 0]);
 const statsRef = useRef<HTMLDivElement>(null);
 
@@ -207,24 +208,6 @@ useEffect(() => {
     items.forEach((item) => observer.observe(item));
     return () => observer.disconnect();
   }, []);
-
-  async function submitContact(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    setFormState("sending");
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/muzammilswatti7@gmail.com", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form),
-      });
-      if (!response.ok) throw new Error("Submission failed");
-      form.reset();
-      setFormState("success");
-    } catch {
-      setFormState("error");
-    }
-  }
 
   return (
     <>
@@ -591,7 +574,7 @@ useEffect(() => {
               </div>
             </div>
 
-            <form className="contact-form" onSubmit={submitContact} action="https://formsubmit.co/muzammilswatti7@gmail.com" method="POST">
+            <form className="contact-form" onSubmit={(event) => submitForm(event, setFormState)} action="https://formsubmit.co/muzammilswatti7@gmail.com" method="POST">
               <div className="form-head"><div><span>PROJECT INTAKE</span><h3>Tell us about your goal.</h3></div><i><b /> OPEN</i></div>
               <div className="form-row">
                 <label><span>Your name</span><input type="text" name="name" placeholder="Enter your name" autoComplete="name" required /></label>

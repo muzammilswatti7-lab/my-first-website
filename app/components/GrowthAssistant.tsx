@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useState } from "react";
 
 const topics = [
   {
@@ -55,10 +55,7 @@ export default function GrowthAssistant() {
   const [goal, setGoal] = useState("");
   const [question, setQuestion] = useState("");
 
-  const activeTopic = useMemo(
-    () => topics.find((topic) => topic.id === selected),
-    [selected]
-  );
+  const activeTopic = topics.find((topic) => topic.id === selected);
 
   const whatsappMessage = encodeURIComponent(
     `Hello MK Digital Labs, I am interested in ${
