@@ -19,6 +19,23 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body { margin: 0; background: var(--ink); color: var(--text); font-family: var(--font-display); overflow-x: hidden; }
 html { overflow-x: hidden; }
 body.menu-open { overflow: hidden; }
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img {
+  -webkit-user-drag: none;
+}
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
 ::selection { color: #090a05; background: var(--lime); }

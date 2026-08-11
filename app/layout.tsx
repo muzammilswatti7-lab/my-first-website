@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import GrowthAssistant from "./components/GrowthAssistant";
+import AssistantLoader from "./components/AssistantLoader";
+import ContentProtection from "./components/ContentProtection";
 
 const siteUrl = "https://my-first-website-eta-murex.vercel.app";
 
@@ -92,12 +93,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      <ContentProtection />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         {children} 
-        <GrowthAssistant />
+        <AssistantLoader />
       </body>
     </html>
   );
