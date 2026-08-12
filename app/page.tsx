@@ -242,6 +242,7 @@ useEffect(() => {
                 ["Process", "#process"],
                 ["FAQ", "#faq"],
                 ["Portfolio", "/portfolio"],
+                ["About", "/about"],
                 ["Contact", "#contact"],
               ].map(([label, href]) => (
                 <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
