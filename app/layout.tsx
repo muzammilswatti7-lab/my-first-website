@@ -3,7 +3,7 @@ import "./globals.css";
 import AssistantLoader from "./components/AssistantLoader";
 import ContentProtection from "./components/ContentProtection";
 
-const siteUrl = "https://my-first-website-eta-murex.vercel.app";
+const siteUrl = "https://mk-digital-labs.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
