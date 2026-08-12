@@ -112,7 +112,44 @@ const services = [
     accent: "violet",
   },
 ];
-
+const testimonials = [
+  {
+    name: "Amjad Sheikh",
+    company: "AS Developer",
+    service: "Web Development",
+    location: "Karachi Pakistan",
+    rating: 4,
+    review:
+      "I received an outstanding response from MK Digital Labs They are a reliable and credible agency",
+  },
+  {
+    name: "Usama Majeed",
+    company: "Usama Majeed",
+    service: "Meta Ads",
+    location: "Pakistan",
+    rating: 5,
+    review:
+      "My company achieved amazing results after working with MK Digital Labs I truly appreciate your support",
+  },
+  {
+    name: "Khalid Al Quraish",
+    company: "Al Quraish Oud",
+    service: "Shopify",
+    location: "Dubai UAE",
+    rating: 3,
+    review:
+      "A trustworthy agency with a responsive and professional team",
+  },
+  {
+    name: "Alicent Holmes",
+    company: "Nana Fashion",
+    service: "Amazon Ecommerce",
+    location: "Virginia USA",
+    rating: 4,
+    review:
+      "I have worked with many agencies but MK Digital Labs stands far above the rest in quality and credibility Thank you for your support",
+  },
+];
 
 const faqs = [
   {
@@ -240,6 +277,7 @@ useEffect(() => {
                 ["Services", "#services"],
                 ["System", "#system"],
                 ["Process", "#process"],
+                ["Testimonials", "#testimonials"],
                 ["FAQ", "#faq"],
                 ["Portfolio", "/portfolio"],
                 ["About", "/about"],
@@ -539,11 +577,77 @@ useEffect(() => {
 </div>
           </div>
         </section>
+<section className="section testimonials-section" id="testimonials">
+  <div className="container">
+    <div className="testimonials-heading reveal-scroll">
+      <div>
+        <p className="section-tag">
+          <span>05</span> CLIENT FEEDBACK
+        </p>
+        <h2>
+          Trusted by businesses
+          <br />
+          <em>across markets</em>
+        </h2>
+      </div>
 
+      <p>
+        Genuine feedback from clients who trusted MK Digital Labs with their
+        digital growth
+      </p>
+    </div>
+
+    <div className="testimonials-grid reveal-scroll">
+      {testimonials.map((testimonial) => (
+        <article className="testimonial-card" key={testimonial.name}>
+          <div className="testimonial-top">
+            <div
+              className="testimonial-stars"
+              aria-label={`${testimonial.rating} out of 5 stars`}
+            >
+              {Array.from({ length: 5 }, (_, index) => (
+                <span
+                  className={index < testimonial.rating ? "active" : ""}
+                  key={index}
+                  aria-hidden="true"
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+
+            <span className="testimonial-service">
+              {testimonial.service}
+            </span>
+          </div>
+
+          <blockquote>{testimonial.review}</blockquote>
+
+          <div className="testimonial-client">
+            <span className="testimonial-avatar" aria-hidden="true">
+              {testimonial.name
+                .split(" ")
+                .map((word) => word[0])
+                .slice(0, 2)
+                .join("")}
+            </span>
+
+            <div>
+              <strong>{testimonial.name}</strong>
+              <span>
+                {testimonial.company} · {testimonial.location}
+              </span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
         <section className="section faq-section" id="faq">
           <div className="container faq-layout">
             <div className="faq-intro reveal-scroll">
-              <p className="section-tag"><span>05</span> FAQ</p>
+              <p className="section-tag"><span>06</span> FAQ</p>
               <h2>Before we build,<br /><em>let&apos;s make it clear.</em></h2>
               <p>Have a question that is not here? Send us a WhatsApp message and we will point you in the right direction.</p>
               <a className="text-link system-link" href={whatsapp} target="_blank" rel="noreferrer">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
@@ -565,7 +669,7 @@ useEffect(() => {
           <div className="contact-aurora" />
           <div className="container contact-layout reveal-scroll">
             <div className="contact-copy">
-              <p className="section-tag"><span>06</span> START A CONVERSATION</p>
+              <p className="section-tag"><span>07</span> START A CONVERSATION</p>
               <h2>Your next stage of growth starts with <em>one clear move.</em></h2>
               <p>Tell us what you want to improve. We will review your needs and suggest the most practical next step—without the confusing agency talk.</p>
               <div className="contact-options">
